@@ -28,7 +28,7 @@ public class MyGLSurfaceView extends GLSurfaceView {
     private final MyGLRenderer mRenderer;
     public static final int SELECTIED_SQUARE = 1;
     public static final int SELECTIED_CIRCLE = 2;
-    public static final int SELECTIED_TRIANGLE = 3;
+    public static final int SELECTIED_RECTANGLE = 3;
     int selectedItem=1;
 
 

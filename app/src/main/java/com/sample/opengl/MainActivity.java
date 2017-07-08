@@ -19,14 +19,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         LinearLayout data_container = (LinearLayout) findViewById(R.id.data_container);
         Button buttonCircle = (Button) findViewById(R.id.buttonCircle);
         Button buttonSquare = (Button) findViewById(R.id.buttonSquare);
-        Button buttonTriangle = (Button) findViewById(R.id.buttonTriangle);
+        Button buttonRectangle = (Button) findViewById(R.id.buttonRectangle);
 
         // Create a GLSurfaceView instance and set it
         // as the ContentView for this Activity.
         mGLView = new MyGLSurfaceView(this);
         data_container.addView(mGLView);
         ((MyGLSurfaceView)mGLView).setCurrentSelection(selectedItem);
-        buttonTriangle.setOnClickListener(this);
+        buttonRectangle.setOnClickListener(this);
         buttonSquare.setOnClickListener(this);
         buttonCircle.setOnClickListener(this);
     }
@@ -79,8 +79,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.buttonCircle:
                 ((MyGLSurfaceView) mGLView).setCurrentSelection(MyGLSurfaceView.SELECTIED_CIRCLE);
                 break;
-            case R.id.buttonTriangle:
-                ((MyGLSurfaceView) mGLView).setCurrentSelection(MyGLSurfaceView.SELECTIED_TRIANGLE);
+            case R.id.buttonRectangle:
+                ((MyGLSurfaceView) mGLView).setCurrentSelection(MyGLSurfaceView.SELECTIED_RECTANGLE);
                 break;
         }
     }

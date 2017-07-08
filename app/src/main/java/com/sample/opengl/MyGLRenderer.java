@@ -38,6 +38,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     private Square mSquare;
     private Circle mCircle;
     private RandomShape random;
+    private Rectangle mRectangle;
     // mMVPMatrix is an abbreviation for "Model View Projection Matrix"
     private final float[] mMVPMatrix = new float[16];
     private final float[] mProjectionMatrix = new float[16];
@@ -55,6 +56,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mSquare   = new Square();
         mCircle = new Circle();
         random = new RandomShape();
+        mRectangle = new Rectangle();
     }
     @Override
     public void onDrawFrame(GL10 unused) {
@@ -74,8 +76,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
             case MyGLSurfaceView.SELECTIED_SQUARE:
                 mSquare.draw(mMVPMatrix);
                 break;
-            case MyGLSurfaceView.SELECTIED_TRIANGLE:
-                mTriangle.draw(mMVPMatrix);
+            case MyGLSurfaceView.SELECTIED_RECTANGLE:
+                mRectangle.draw(mMVPMatrix);
                 break;
         }
 
